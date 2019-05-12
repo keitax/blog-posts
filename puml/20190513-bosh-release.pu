@@ -1,0 +1,27 @@
+@startuml
+
+skinparam componentStyle uml2
+
+frame "Work Station" {
+    component "BOSH CLI" as cli
+}
+
+cloud "VLAN" as vlan0 {
+    database "Blob Store" as bstore
+}
+
+cloud "VLAN" as vlan1 {
+    component "Director" as director
+    component "VM 0" as vm0
+    component "VM 1" as vm1
+    component "VM N..." as vmn
+}
+
+cli --> bstore : Blob
+bstore --> cli : Blob
+cli --> director : Release
+director --> vm0 : Deploy Files
+director --> vm1 : Deploy Files
+director --> vmn : Deploy Files
+
+@enduml
