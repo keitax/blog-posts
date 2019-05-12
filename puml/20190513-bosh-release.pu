@@ -2,12 +2,12 @@
 
 skinparam componentStyle uml2
 
-frame "Work Station" {
+frame "Workstation" {
     component "BOSH CLI" as cli
 }
 
 cloud "VLAN" as vlan0 {
-    database "Blob Store" as bstore
+    database "Blobstore" as bstore
 }
 
 cloud "VLAN" as vlan1 {
