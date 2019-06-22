@@ -1,3 +1,3 @@
 # blog-posts
 
-Blog posts of https://blog.keitax.net
+Blog posts of https://blog.keitam.net
